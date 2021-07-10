@@ -1,13 +1,15 @@
 {
   "devDependencies": {
+    "@types/node-fetch": "^2.5.11",
     "@types/node-telegram-bot-api": "^0.51.4",
     "typescript": "^4.3.5"
   },
   "dependencies": {
+    "node-fetch": "^2.6.1",
     "node-telegram-bot-api": "^0.53.0"
   },
   "scripts": {
-    "start": "node out/index.js",
+    "start": "node out/src/index.js",
     "build": "tsc"
   }
 }
