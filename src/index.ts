@@ -9,7 +9,7 @@ const config:Config = configFile;
 
 //Fetch latest trivia questions
 async function updateTrivia(){
-  console.log(`Fetching latest trivia data...`)
+  console.log(`Fetching latest trivia data from '${config.dataEndpoint}'...`)
   const response = await fetch(config.dataEndpoint, {
       "method":"GET",
       "headers":{
