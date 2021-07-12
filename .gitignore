@@ -2,3 +2,4 @@ node_modules/
 trivia.json
 out/
 config.ts
+.DS_Store
