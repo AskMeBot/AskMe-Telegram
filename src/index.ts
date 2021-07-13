@@ -1,3 +1,6 @@
+//@ts-ignore
+process.env.NTBA_FIX_319 = 1;
+
 import fetch from 'node-fetch'
 import configFile from '../config'
 import {readFileSync, existsSync, writeFileSync} from 'fs'
@@ -16,6 +19,8 @@ async function updateTrivia(){
           "authorization":config.dataEndpointAuthorizationHeader || undefined
       }
   })
+  if(response.status != 200)
+    return console.log(`Received a ${response.status}. Not saving.`)
   const data = (await response.json() as TriviaConfig)
   writeFileSync("./trivia.json", JSON.stringify(data))
   console.log("Latest trivia data fetched")
