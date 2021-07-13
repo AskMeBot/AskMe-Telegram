@@ -10,6 +10,6 @@
   },
   "scripts": {
     "start": "node out/src/index.js",
-    "build": "tsc"
+    "build": "tsc --build tsconfig.json"
   }
 }
